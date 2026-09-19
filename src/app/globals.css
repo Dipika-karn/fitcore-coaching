@@ -1,26 +1,159 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ========================================
+     BRAND COLORS
+  ======================================== */
+
+  --primary: #7c3aed;
+  --primary-hover: #8b5cf6;
+  --primary-active: #6d28d9;
+
+  --blue-accent: #2563eb;
+  --purple-glow: #8b5cf6;
+
+  /* ========================================
+     BACKGROUNDS
+  ======================================== */
+
+  --background: #020817;
+  --background-secondary: #061126;
+
+  --surface: #0a1730;
+
+  --card: #0b1a35;
+  --card-hover: #101f40;
+
+  /* ========================================
+     BORDERS
+  ======================================== */
+
+  --border: #1c3157;
+  --border-light: #263d67;
+
+  /* ========================================
+     TEXT
+  ======================================== */
+
+  --text: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  /* ========================================
+     GRADIENTS
+  ======================================== */
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    #7c3aed 0%,
+    #4f46e5 100%
+  );
+
+  --gradient-glow: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.35),
+    transparent 70%
+  );
+
+  --gradient-section: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.18),
+    rgba(37, 99, 235, 0.08),
+    transparent
+  );
+
+  /* ========================================
+     BORDER RADIUS
+  ======================================== */
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.125rem;
+  --radius-2xl: 1.5rem;
+  --radius-pill: 9999px;
+
+  /* ========================================
+     SHADOWS
+  ======================================== */
+
+  --shadow-card:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+
+  --shadow-primary:
+    0 10px 30px rgba(124, 58, 237, 0.25);
+
+  --shadow-glow:
+    0 0 40px rgba(124, 58, 237, 0.2);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+/* ========================================
+   GLOBAL RESET
+======================================== */
+
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
+  min-height: 100vh;
+
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+
+  font-family: var(--font-manrope), sans-serif;
+
+  text-rendering: optimizeLegibility;
+}
+
+
+/* ========================================
+   FORM ELEMENTS
+======================================== */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* ========================================
+   MEDIA
+======================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ========================================
+   LINKS
+======================================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ========================================
+   TEXT SELECTION
+======================================== */
+
+::selection {
+  background: var(--primary);
+  color: var(--text);
 }

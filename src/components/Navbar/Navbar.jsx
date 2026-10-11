@@ -62,7 +62,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden lg:block">
           <Link
-            href="#contact"
+            href="#pricing"
             className="
               inline-flex
               items-center
@@ -149,7 +149,7 @@ export default function Navbar() {
               ))}
 
               <Link
-                href="#contact"
+                href="#pricing"
                 onClick={closeMenu}
                 className="
                   mt-2

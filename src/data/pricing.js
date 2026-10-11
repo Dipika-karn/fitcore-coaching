@@ -6,6 +6,10 @@ export const pricingPlans = [
     price: "$49",
     period: "month",
     popular: false,
+
+    whatsappMessage:
+      "Hello! I am interested in the Starter fitness coaching plan ($49/month). I would like to know more about it.",
+
     features: [
       "Personalized workout plan",
       "Basic nutrition guide",
@@ -20,6 +24,10 @@ export const pricingPlans = [
     price: "$79",
     period: "month",
     popular: true,
+
+    whatsappMessage:
+      "Hello! I am interested in the Transformation fitness coaching plan ($79/month). I would like to know more about it.",
+
     features: [
       "Customized workout & nutrition plan",
       "Weekly progress tracking",
@@ -35,6 +43,10 @@ export const pricingPlans = [
     price: "$129",
     period: "month",
     popular: false,
+
+    whatsappMessage:
+      "Hello! I am interested in the Premium fitness coaching plan ($129/month). I would like to know more about it.",
+
     features: [
       "Everything in Transformation",
       "1:1 video call monthly",

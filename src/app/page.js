@@ -8,6 +8,8 @@ import Pricing from "@/components/Pricing/Pricing";
 import FAQ from "@/components/FAQ/FAQ";
 import CTA from "@/components/CTA/CTA";
 import Footer from "@/components/Footer/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton/WhatsAppButton";
+import Contact from "@/components/Contact/Contact";
 
 export default function Home() {
   return (
@@ -19,9 +21,11 @@ export default function Home() {
         <HowItWorks />
          <Testimonials />
           <Pricing />
+           <Contact />
            <FAQ />
            <CTA />
            <Footer />
+           <WhatsAppButton />
 
 
     </main>

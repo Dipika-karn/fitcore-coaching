@@ -1,7 +1,12 @@
 import { Check } from "lucide-react";
-import Link from "next/link";
+
+const whatsappNumber = "918294592689";
 
 export default function PricingCard({ plan }) {
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    plan.whatsappMessage
+  )}`;
+
   return (
     <article
       className={`relative flex h-full flex-col rounded-(--radius-xl) border p-6 transition-all duration-300 hover:-translate-y-1 ${
@@ -10,7 +15,6 @@ export default function PricingCard({ plan }) {
           : "border-(--border) bg-(--card) hover:border-(--primary)/40 hover:bg-(--card-hover)"
       }`}
     >
-      {/* Popular badge */}
       {plan.popular && (
         <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
           <span className="whitespace-nowrap rounded-(--radius-pill) bg-(--gradient-primary) px-4 py-1.5 text-xs font-bold text-white shadow-(--shadow-primary)">
@@ -19,7 +23,6 @@ export default function PricingCard({ plan }) {
         </div>
       )}
 
-      {/* Plan information */}
       <div>
         <h3 className="text-lg font-bold text-(--text)">
           {plan.name}
@@ -30,7 +33,6 @@ export default function PricingCard({ plan }) {
         </p>
       </div>
 
-      {/* Price */}
       <div className="mt-6 flex items-end gap-2">
         <span className="text-4xl font-extrabold tracking-tight text-(--text)">
           {plan.price}
@@ -41,9 +43,11 @@ export default function PricingCard({ plan }) {
         </span>
       </div>
 
-      {/* CTA */}
-      <Link
-        href="#contact"
+      {/* WhatsApp Button */}
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         className={`mt-6 inline-flex items-center justify-center rounded-(--radius-pill) px-5 py-3 text-sm font-bold transition-all duration-200 ${
           plan.popular
             ? "bg-(--gradient-primary) text-white shadow-(--shadow-primary) hover:-translate-y-0.5 hover:shadow-(--shadow-glow)"
@@ -51,12 +55,10 @@ export default function PricingCard({ plan }) {
         }`}
       >
         Get Started
-      </Link>
+      </a>
 
-      {/* Divider */}
       <div className="my-6 h-px bg-(--border)" />
 
-      {/* Features */}
       <ul className="space-y-4">
         {plan.features.map((feature) => (
           <li

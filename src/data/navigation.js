@@ -19,4 +19,9 @@ export const navigationLinks = [
     label: "FAQ",
     href: "#faq",
   },
+
+    {
+    label: "Pricing",
+    href: "#pricing",
+  },
 ];

@@ -8,9 +8,45 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  title: "FitCore Coaching | Online Fitness Coaching",
+  metadataBase: new URL("https://www.yourdomain.com"),
+
+  title: {
+    default: "FitCore Coaching | Online Fitness Coaching",
+    template: "%s | FitCore Coaching",
+  },
+
   description:
-    "Personalized online fitness coaching designed to help you get stronger, feel better and live healthier.",
+    "Personalized online fitness coaching designed to help you get stronger, feel better, and live healthier.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    siteName: "FitCore Coaching",
+    title: "FitCore Coaching | Online Fitness Coaching",
+    description:
+      "Personalized online fitness coaching designed to help you get stronger, feel better, and live healthier.",
+    url: "/",
+    images: [
+      {
+        url: "/images/seo/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "FitCore Coaching — Online Fitness Coaching",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "FitCore Coaching | Online Fitness Coaching",
+    description:
+      "Personalized online fitness coaching designed to help you get stronger, feel better, and live healthier.",
+    images: ["/images/seo/og-image.png"],
+  },
 };
 
 export default function RootLayout({ children }) {

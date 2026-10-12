@@ -1,4 +1,5 @@
-const SITE_URL = "https://www.yourdomain.com";
+
+const SITE_URL = "https://fitcore-coaching.vercel.app";
 
 export default function robots() {
   return {

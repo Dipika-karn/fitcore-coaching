@@ -8,7 +8,7 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://www.yourdomain.com"),
+  metadataBase: new URL("https://fitcore-coaching.vercel.app"),
 
   title: {
     default: "FitCore Coaching | Online Fitness Coaching",
